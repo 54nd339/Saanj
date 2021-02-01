@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .button {
+     display: inline-block;
+     border-radius: 4px;
+     background-color: #808080;
+     border: none;
+     color: #FFFFFF;
+     text-align: center;
+     font-size: 28px;
+     padding: 20px;
+     width: 200px;
+     transition: all 0.5s;
+     cursor: pointer;
+     margin: 5px;
+   }
+
+   .button span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+   }
+
+   .button span:after {
+     content: '\00bb';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -20px;
+     transition: 0.5s;
+   }
+
+   .button:hover span {
+     padding-right: 25px;
+   }
+
+   .button:hover span:after {
+     opacity: 1;
+     right: 0;
+   }
+</style>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Anniversary</title>
+	<script type="text/javascript" src="lufylegend-1.10.1.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body onclick="click_event()">
+	<div class="bg_music">
+		<audio src="../music.mp3" autoplay="autoplay" loop="" id="bg_music"></audio>
+	</div>
+<!--audio id="bg_music">
+  <source src="../music.mp3" type="audio/mpeg">
+</audio-->
+<script>
+setTimeout(function () {
+    let bg_music_src = $('.bg_music').data('src');
+    $(".bg_music").append(`<audio src="happybirthday.mp3" autoplay="autoplay" loop id="bg_music"></audio>`);
+    let audio = document.getElementById('bg_music');
+    
+    document.addEventListener("WeixinJSBridgeReady", function () {
+      audio.play();
+    }, false);
+  }, 200)
+
+// https://www.w3schools.com/jsref/met_audio_play.asp
+function click_event() {
+  console.log("clicked");
+  let audio = document.getElementById('bg_music');
+  audio.play();
+}
+</script>
+	<div id="legend"></div>
+	<div align="right">
+        	<button class="button" style="vertical-align:middle"><span><a href="../Wish">Next</a></span></button>
+    	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
