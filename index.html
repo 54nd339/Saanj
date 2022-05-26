@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,700&display=swap"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Dear Saanj</title>
+</head>
+<body>
+    <audio loop autoplay src="song.mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+      <div class="text">
+        <span id="typed"></span>
+      </div>
+    </div>
+      
+    <script>
+      var options = {
+        strings: [
+          `<span>Hey Saanj,</span>^1000\n\nYou're perfect.\n\n`,
+          `Yeah, IK we've been distanced.`,
+          `Yeah, IK we don't feel the same.`,
+          `Yeah, IK there had been a lot in recent months.`,
+          `Yeah, I'm sorry for everything.`,
+          `Yeah, I'm sorry for letting you down at times.`,
+          `Yeah, I'm sorry for not understanding your immature self.`,
+          `Yeah, IK You've grown mature.`,
+          `Yeah, IK You've grown <span class="line-through">mature</span> but still be immature for me naa.`,
+          `Yeah, IK You're having your personal space n time..`,
+          `Yeah, IK you wanna go with the flow.`,
+          `Yeah, IK you wanna avoid everyone.`,
+          `Yeah, IK you wanna <span class="line-through">avoid everyone</span> find ur peace.`,
+          `Yeah, IK I don't desrve to be excused for the SCARS.`,
+          `But my heart still adores you ^1800\nAnd still wish if I had another chance to make things go right.`,
+          `You're an amazing PERSON.^1800\n\nAnd my loving social butterfly.\n\n`,
+          `THANKS.^1000\n\nFor^1000 teaching me love...`,
+          `THANKS.\n\nFor your prayers n cares...`,
+          `THANKS.\n\nFor every effort of yours...^1000\n\nTo keep me happy.`,
+          `Sometime it hurts, that we're not together anymore.`,
+          `Sometime you push me to others.^1000\n\nBut mann toh har kisi me aapko hi dhundtaa he...`,
+          `So thank you, for whatever you did, whatever you planned!`,
+          `May everything just gets normalized, n may our paths intersect ^500\n\nAGAIN.`
+        ],
+        typeSpeed: 40,
+        backSpeed: 10,
+        backDelay: 1500,
+        smartBackspace: true
+      }
+      var typed = new Typed("#typed", options)
+      
+      setTimeout(() => {
+         window.location.href = "greeting"
+      }, 115000)
+    </script>
+  </body>
+</html>
